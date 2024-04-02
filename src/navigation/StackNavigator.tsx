@@ -1,8 +1,8 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Home from '../screens/HomeScreen/HomeScreen';
-import Results from '../screens/ResultsScreen/ResultsScreen';
-import {RootStackParamList} from '../types';
+import Home from '../screens/homeScreen/HomeScreen';
+import Results from '../screens/resultsScreen/ResultsScreen';
+import {RootStackParamList} from '../types/NavigationProps';
 // Stack Navigator for our apps
 
 function AppStack(): React.JSX.Element {
@@ -30,6 +30,7 @@ function AppStack(): React.JSX.Element {
             title: 'Result',
           }}
         />
+        {/* You can add more screens here */}
       </Stack.Navigator>
     </NavigationContainer>
   );
