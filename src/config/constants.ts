@@ -111,26 +111,23 @@ export const ASSESSMENT_DATA = [
         points: 2,
       },
       {
-        title:
-          'I am more concerned about the possible losses than the possible gains.',
-        points: 3,
-      },
-      {
         title: 'I can accept possible losses for long-term investment growth.',
-        points: 4,
+        points: 3,
       },
       {
         title:
           'To achieve high levels of growth, it is necessary to take risk.',
-        points: 5,
+        points: 4,
       },
     ],
   },
   // add more questions here
 ];
 
-export const lowProfileRiskPoints = 10;
-export const mediumProfileRiskPoints = 16;
-export const highProfileRiskPoints = 23;
+export const lowProfileRiskPoints = 9;
+export const mediumProfileRiskPoints = 15;
+export const lowRiskText = 'Low Risk';
+export const mediumRiskText = 'Medium Risk';
+export const highRiskText = 'High Risk';
 
 // you can define other constatns here

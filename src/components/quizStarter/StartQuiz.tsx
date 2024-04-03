@@ -5,14 +5,15 @@ import {startQuizComponent} from '../../types/ComponentInterfaces';
 const StartQuiz = ({startQuiz}: startQuizComponent) => {
   // to show start quiz button. I have aded text directly here, instead of this we should have some text management with multi language
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="initialStartMain">
       <View style={styles.centerView}>
-        <Text style={styles.informationText}>
+        <Text style={styles.informationText} testID="initialStartText">
           {
             'To calculate Risk Management we have created a questionaire. Please start the quiz from below.'
           }
         </Text>
         <TouchableOpacity
+          testID="initialStartMainButton"
           onPress={() => startQuiz()}
           style={styles.startQuizButton}>
           <Text>{'Start Quiz'}</Text>

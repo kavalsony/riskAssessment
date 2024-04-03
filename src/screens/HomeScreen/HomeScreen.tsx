@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import {HomeScreenProps} from '../../types/NavigationProps';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import StartQuiz from '../../components/quizStarter/StartQuiz';
-import QuestionComponent from '../../components/QuestionComponent/QuestionComponent';
+import QuestionComponent from '../../components/questionComponent/QuestionComponent';
+import {useSelector} from 'react-redux';
+import {stateProps} from '../../types/ComponentInterfaces';
 
 const Home = ({navigation}: HomeScreenProps) => {
   const [quizStarted, setQuizStarted] = useState(false); // to store if quiz started or not
@@ -11,12 +13,21 @@ const Home = ({navigation}: HomeScreenProps) => {
     setQuizStarted(true);
   };
 
+  const currentScore = useSelector((state: stateProps) => {
+    //console.log(state.next.currentQuestionIndex);
+    return state.next.totalPoints;
+  });
+
+  const finishQuiz = () => {
+    navigation.navigate('Results', {result: currentScore});
+  };
+
   return (
-    <View>
+    <View testID="Home_MainContainer">
       {!quizStarted ? (
         <StartQuiz startQuiz={startTheQuiz} />
       ) : (
-        <QuestionComponent />
+        <QuestionComponent finish={finishQuiz} />
       )}
     </View>
   );

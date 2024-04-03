@@ -18,13 +18,7 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 import AppStack from './src/navigation/StackNavigator';
 import configureStore from './src/redux/store/store';
 import {Provider} from 'react-redux';
