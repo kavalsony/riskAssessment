@@ -10,36 +10,19 @@ First, you will need to start **Metro**, the JavaScript _bundler_ that ships _wi
 
 To start Metro, run the following command from the _root_ of your React Native project:
 
-```bash
-# using npm
-npm start
+We are using latest react native cli
 
-# OR using Yarn
-yarn start
-```
+so run command:
+
+npx react-native start
 
 ## Step 2: Start your Application
 
 Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
+Either Open xcode and run app in simulator (metro should pick it up)
+or select run ios in metro
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
@@ -51,29 +34,22 @@ This is one way to run your app — you can also run it directly from within And
 Now that you have successfully run the app, let's modify it.
 
 1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+2. HomeScreen holds Quiz and Result screen holds result ui
+3. First UI will be place holder ui to start quiz
+4. once you start the quiz then it will show first question
+5. Questionas are hardcoded for now, it can come from api as well.
+6. Once you select any answer you will see Next button which will take you to next question
+7. Once yopu are on last question, you will see Finish button which will take you to result screen with score
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-## Congratulations! :tada:
+To run the test:
+npm run test --watchAll
 
-You've successfully run and modified your React Native App. :partying_face:
+To Generate Coverage:
+npm run test a -- --coverage
 
-### Now what?
+Current code coverage: 92%
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-# Troubleshooting
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+```

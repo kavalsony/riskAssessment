@@ -100,4 +100,26 @@ describe('Result screen test', () => {
     const res_risk_text = screen.getByTestId('res_risk_text');
     expect(res_risk_text).toBeTruthy();
   });
+  test('result screen param medium risk test', () => {
+    const store = configureStore();
+    const dt = {params: {result: 10}};
+    render(
+      <Provider store={store}>
+        <Results route={dt} />
+      </Provider>,
+    );
+    const res_risk_text = screen.getByTestId('res_risk_text');
+    expect(res_risk_text).toBeTruthy();
+  });
+  test('result screen param high risk test', () => {
+    const store = configureStore();
+    const dt = {params: {result: 20}};
+    render(
+      <Provider store={store}>
+        <Results route={dt} />
+      </Provider>,
+    );
+    const res_risk_text = screen.getByTestId('res_risk_text');
+    expect(res_risk_text).toBeTruthy();
+  });
 });
